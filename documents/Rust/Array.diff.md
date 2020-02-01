@@ -12,7 +12,6 @@ retain을 이용하면 된다는 힌트까지는 얻었으나 그 뒤 인자에 
 fn array_diff<T: PartialEq>(a: Vec<T>, b: Vec<T>) -> Vec<T> {
     let mut a = a;
     a.retain(|x| !b.contains(x));
-
     a
 }
 ```
