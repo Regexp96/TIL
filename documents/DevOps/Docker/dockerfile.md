@@ -2,6 +2,33 @@
 
 docker 이미지 설정파일
 
+대소문자는 구별되지 않지만 대문자가 권장된다.
+
+이스케이프 문자는 두가지로 \와 `로 구성되어있다
+
+도커 파일은 다음과 같은 명령어들로 이루어져 있다
+
+- `FROM` : 기반 이미지 설정
+- `RUN`
+- `CMD`
+- `LABEL`
+- `MAINTAINER` (depricated)
+- `EXPOSE`
+- `ENV`
+- `ADD`
+- `COPY`
+- `ENTRYPOINT`
+- `VOLUME`
+- `USER`
+- `WORKDIR`
+- `ARG`
+- `ONBUILD`
+- `STOPSIGNAL`
+- `HEALTHCHECK`
+- `SHELL`
+
+## 예제
+
 ~~~dockerfile
 FROM ubuntu:14.04
 MAINTAINER Foo Bar <foo@bar.com>
@@ -21,7 +48,6 @@ EXPOSE 80
 EXPOSE 443
 ~~~
 
-- from : 기반 이미지 설정 위 예제에서는 우분투 14:04버전 이용
 - run : 쉘스크립트 실행
   - 이미지 생성중에는 사용자입력을 받을 수 없음
   - 설정값 변경시 sed 명령어로 문자열 변경해야함 
